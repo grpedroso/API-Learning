@@ -12,3 +12,4 @@ C:\Users\gabri\OneDrive\Área de Trabalho\CURSO C#\ScreenSound-04\ScreenSound-04
 C:\Users\gabri\OneDrive\Área de Trabalho\CURSO C#\ScreenSound-04\ScreenSound-04\obj\Debug\net8.0\ScreenSound-04.pdb
 C:\Users\gabri\OneDrive\Área de Trabalho\CURSO C#\ScreenSound-04\ScreenSound-04\obj\Debug\net8.0\ScreenSound-04.genruntimeconfig.cache
 C:\Users\gabri\OneDrive\Área de Trabalho\CURSO C#\ScreenSound-04\ScreenSound-04\obj\Debug\net8.0\ref\ScreenSound-04.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\CURSO C#\ScreenSound-04\ScreenSound-04\obj\Debug\net8.0\ScreenSound-04.sourcelink.json

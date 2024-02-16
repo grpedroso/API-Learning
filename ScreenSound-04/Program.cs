@@ -1,13 +1,13 @@
-﻿using (HttpClient client = new HttpClient())
+﻿using ScreenSound_04.Modelos;
+using System.Text.Json;
+
+using (HttpClient client = new HttpClient())
 {
     try
     {
-        string resposta = await client.GetStringAsync("https://www.cheapshark.com/api/1.0/deals");
-        Console.Write("Insira o numero A: ");
-        int a = int.Parse(Console.ReadLine());
-        Console.Write("Insira o numero B: ");
-        int b = int.Parse(Console.ReadLine());
-        int c = a / b;
+        string resposta = await client.GetStringAsync("https://guilhermeonrails.github.io/api-csharp-songs/songs.json");
+        var musicas = JsonSerializer.Deserialize<List<Musica>>(resposta)!; // Transforma o dado/string JSON para objeto manipulavel em C#
+        musicas[1995].ExibirDetalhesDaMusica();
     }
     catch (Exception ex)
     {
