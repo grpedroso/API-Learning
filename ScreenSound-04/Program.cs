@@ -11,7 +11,8 @@ using (HttpClient client = new HttpClient())
         //LinqFilter.FiltrarTodosOsGenerosMusicais(musicas); // Seleciona e filtra todos os generos musicais
         //LinqOrder.ExibirListaDeArtistaOrdenados(musicas);
         //LinqFilter.FiltrarArtistasPorGeneroMusical(musicas, "hip hop");
-        LinqFilter.FiltrarMusicasDeUmArtista(musicas, "Wiz Khalifa");
+        //LinqFilter.FiltrarMusicasDeUmArtista(musicas, "Wiz Khalifa");
+        LinqFilter.FiltrarMusicasPorAno(musicas, "2003");
     }
     catch (Exception ex)
     {

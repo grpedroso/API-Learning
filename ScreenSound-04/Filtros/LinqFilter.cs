@@ -33,4 +33,14 @@ internal class LinqFilter
             Console.WriteLine("- " + musica.Nome); // exibe somente o NOME da música
         }
     }
+    public static void FiltrarMusicasPorAno(List<Musica> musicas, string ano)
+    {
+        var musicasPorAno = musicas.Where(musica => musica.Ano!.Equals
+        (ano)).ToList(); // Filtra as musicas lançadas em determinado ano
+        Console.WriteLine("Ano de lançamento: " + ano);
+        foreach (var musica in musicasPorAno)
+        {
+            Console.WriteLine("- " + musica.Nome);
+        }
+    }
 }
