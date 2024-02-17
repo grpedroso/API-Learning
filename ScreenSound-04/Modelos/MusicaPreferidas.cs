@@ -30,6 +30,7 @@ namespace ScreenSound_04.Modelos
             {
                 Console.WriteLine("- " + musica.Nome+  " de " + musica.Artista );
             }
+            Console.WriteLine();
         }
 
         public void GerarArquivoJson()
@@ -39,7 +40,22 @@ namespace ScreenSound_04.Modelos
             });
             string nomeDoArquivo = $"musicas-favoritas-{Nome}.json";
             File.WriteAllText(nomeDoArquivo, json); // criar o arquivo JSON
-            Console.WriteLine("O arquivo .json foi criado com sucesso!");
+            Console.WriteLine($"O arquivo .json foi criado com sucesso! " +
+                $"{Path.GetFullPath(nomeDoArquivo)}"); // Obtem a direção de onde foi salvo
+        }
+
+        public void GerarTxtMusicasPreferidas()
+        {
+            string nomeDoArquivo = $"musica-favoritas-{Nome}.txt";
+            using (StreamWriter arquivo = new StreamWriter(nomeDoArquivo))
+            {
+                arquivo.WriteLine($"Músicas favoritas do {Nome}\n");
+                foreach (var musica in ListaDeMusicasFavoritas )
+                {
+                    arquivo.WriteLine("- " + musica.Nome + " de " + musica.Artista); // escreve a lista no arquivo
+                }
+            }
+            Console.WriteLine("TXT gerado com sucesso! " + Path.GetFullPath(nomeDoArquivo));
         }
     }
 }
