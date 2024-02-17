@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace ScreenSound_04.Modelos
 {
     internal class Musica
     {
+        private string[] tonalidades = {"C", "C#", "D", "Eb", "E", "F", "F#", "G", "Ab", "A", "Bb", "B" };
         [JsonPropertyName("song")]
         public string Nome {  get; set; } // song = Nome
         [JsonPropertyName("artist")]
@@ -19,6 +21,9 @@ namespace ScreenSound_04.Modelos
         public string Genero { get; set; }
         [JsonPropertyName("year")]
         public string Ano { get; set; }
+        [JsonPropertyName("key")]
+        public int Chave { get; set; }
+        public string Tonalidade { get { return tonalidades[Chave]; } }
         
         public void ExibirDetalhesDaMusica()
         {
@@ -26,8 +31,9 @@ namespace ScreenSound_04.Modelos
             Console.WriteLine($"Música: {Nome}");
             Console.WriteLine($"Duração da música: {Duracao}");
             Console.WriteLine($"Genero: {Genero}");
-            Console.WriteLine($"Ano: {Ano}");
+            Console.WriteLine($"Tonalidade: {Tonalidade}");
         }
-    
+        
+ 
     }
 }

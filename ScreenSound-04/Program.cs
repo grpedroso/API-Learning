@@ -15,15 +15,15 @@ using (HttpClient client = new HttpClient())
         //LinqFilter.FiltrarMusicasPorAno(musicas, "2003");
 
         var musicasPreferidasDoGabriel = new MusicaPreferidas("Gabriel");
-        musicasPreferidasDoGabriel.AdicionarMusicasFavoritas(musicas[23]);
-        musicasPreferidasDoGabriel.AdicionarMusicasFavoritas(musicas[89]);
-        musicasPreferidasDoGabriel.AdicionarMusicasFavoritas(musicas[123]);
-        musicasPreferidasDoGabriel.AdicionarMusicasFavoritas(musicas[456]);
-        musicasPreferidasDoGabriel.AdicionarMusicasFavoritas(musicas[789]);
-        musicasPreferidasDoGabriel.ExibirMusicasFavoritas();
-
+        //musicasPreferidasDoGabriel.AdicionarMusicasFavoritas(musicas[23]);
+        //musicasPreferidasDoGabriel.AdicionarMusicasFavoritas(musicas[89]);
+        // musicasPreferidasDoGabriel.AdicionarMusicasFavoritas(musicas[123]);
+        // musicasPreferidasDoGabriel.AdicionarMusicasFavoritas(musicas[456]);
+        //musicasPreferidasDoGabriel.AdicionarMusicasFavoritas(musicas[789]);
+        //musicasPreferidasDoGabriel.ExibirMusicasFavoritas();
+        musicas[1993].ExibirDetalhesDaMusica();
         //musicasPreferidasDoGabriel.GerarArquivoJson();
-        musicasPreferidasDoGabriel.GerarTxtMusicasPreferidas();
+        //musicasPreferidasDoGabriel.GerarTxtMusicasPreferidas();
 
     }
     catch (Exception ex)
