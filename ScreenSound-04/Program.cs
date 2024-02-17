@@ -11,8 +11,17 @@ using (HttpClient client = new HttpClient())
         //LinqFilter.FiltrarTodosOsGenerosMusicais(musicas); // Seleciona e filtra todos os generos musicais
         //LinqOrder.ExibirListaDeArtistaOrdenados(musicas);
         //LinqFilter.FiltrarArtistasPorGeneroMusical(musicas, "hip hop");
-        //LinqFilter.FiltrarMusicasDeUmArtista(musicas, "Wiz Khalifa");
-        LinqFilter.FiltrarMusicasPorAno(musicas, "2003");
+        //LinqFilter.FiltrarMusicasDeUmArtista(musicas, "50 Cent");
+        //LinqFilter.FiltrarMusicasPorAno(musicas, "2003");
+
+        var musicasPreferidasDoGabriel = new MusicaPreferidas("Gabriel");
+        musicasPreferidasDoGabriel.AdicionarMusicasFavoritas(musicas[23]);
+        musicasPreferidasDoGabriel.AdicionarMusicasFavoritas(musicas[89]);
+        musicasPreferidasDoGabriel.AdicionarMusicasFavoritas(musicas[123]);
+        musicasPreferidasDoGabriel.AdicionarMusicasFavoritas(musicas[456]);
+        musicasPreferidasDoGabriel.AdicionarMusicasFavoritas(musicas[789]);
+        musicasPreferidasDoGabriel.ExibirMusicasFavoritas();
+
     }
     catch (Exception ex)
     {
