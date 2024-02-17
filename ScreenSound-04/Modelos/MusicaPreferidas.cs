@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace ScreenSound_04.Modelos
@@ -29,6 +30,16 @@ namespace ScreenSound_04.Modelos
             {
                 Console.WriteLine("- " + musica.Nome+  " de " + musica.Artista );
             }
+        }
+
+        public void GerarArquivoJson()
+        {
+            string json = JsonSerializer.Serialize(new 
+            { Nome = Nome, musicas = ListaDeMusicasFavoritas // converte o dado manipulavel em C# para string
+            });
+            string nomeDoArquivo = $"musicas-favoritas-{Nome}.json";
+            File.WriteAllText(nomeDoArquivo, json); // criar o arquivo JSON
+            Console.WriteLine("O arquivo .json foi criado com sucesso!");
         }
     }
 }
