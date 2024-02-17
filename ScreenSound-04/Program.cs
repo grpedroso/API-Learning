@@ -13,6 +13,9 @@ using (HttpClient client = new HttpClient())
         //LinqFilter.FiltrarArtistasPorGeneroMusical(musicas, "hip hop");
         //LinqFilter.FiltrarMusicasDeUmArtista(musicas, "50 Cent");
         //LinqFilter.FiltrarMusicasPorAno(musicas, "2003");
+        Console.Write("Insire o indice no qual deseja buscar:");
+        int x = int.Parse(Console.ReadLine());
+        LinqFilter.FiltrarPorIndice(musicas, x);
 
         var musicasPreferidasDoGabriel = new MusicaPreferidas("Gabriel");
         //musicasPreferidasDoGabriel.AdicionarMusicasFavoritas(musicas[23]);
@@ -21,7 +24,6 @@ using (HttpClient client = new HttpClient())
         // musicasPreferidasDoGabriel.AdicionarMusicasFavoritas(musicas[456]);
         //musicasPreferidasDoGabriel.AdicionarMusicasFavoritas(musicas[789]);
         //musicasPreferidasDoGabriel.ExibirMusicasFavoritas();
-        musicas[1993].ExibirDetalhesDaMusica();
         //musicasPreferidasDoGabriel.GerarArquivoJson();
         //musicasPreferidasDoGabriel.GerarTxtMusicasPreferidas();
 

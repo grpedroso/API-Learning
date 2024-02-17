@@ -43,4 +43,14 @@ internal class LinqFilter
             Console.WriteLine("- " + musica.Nome);
         }
     }
+    public static void FiltrarPorIndice(List<Musica> musicas, int indice)
+    {
+        var musicasPorIndice = musicas.Where(musica => musica.Chave!.Equals
+        (indice)).ToList(); // Filtra as musicas de determinado indice
+        Console.WriteLine("Tonalidade buscada: " + indice);
+        foreach (var musica in musicasPorIndice)
+        {
+            Console.WriteLine("- " + musica.Nome);
+        }
+    }
 }
